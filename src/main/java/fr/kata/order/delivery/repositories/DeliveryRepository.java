@@ -14,13 +14,13 @@ public class DeliveryRepository {
 
     public List<ServiceDelivery> findAvailableDeliveryMethodsByStoreId(Long storeId) {
         return Arrays.asList(
-                ServiceDelivery.builder().idService(1L).idStore(storeId).deliveryMethod(DeliveryMethodEnum.DRIVE).enable(true).build(),
-                ServiceDelivery.builder().idService(1L).idStore(storeId).deliveryMethod(DeliveryMethodEnum.DELIVERY).enable(true).build()
+                ServiceDelivery.builder().idService(1L).idStore(storeId).deliveryMethod(DeliveryMethodEnum.DRIVE).isEnable(true).build(),
+                ServiceDelivery.builder().idService(1L).idStore(storeId).deliveryMethod(DeliveryMethodEnum.DELIVERY).isEnable(true).build()
         );
     }
 
     public ServiceDelivery findServiceDeliveryById(Long idService) {
-        return ServiceDelivery.builder().idService(idService).idStore(3L).deliveryMethod(DeliveryMethodEnum.DRIVE).enable(true).build();
+        return ServiceDelivery.builder().idService(idService).idStore(3L).deliveryMethod(DeliveryMethodEnum.DRIVE).isEnable(true).build();
     }
 
     public List<Slot> findAvailableDeliverySlots(Long idService) {

@@ -10,5 +10,5 @@ public class ServiceDelivery {
     private Long idService;
     private Long idStore;
     private DeliveryMethodEnum deliveryMethod;
-    private Boolean enable;
+    private Boolean isEnable;
 }
