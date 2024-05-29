@@ -1,0 +1,7 @@
+spring.application.name: order
+server:
+  port: 8787
+spring-doc:
+  packagesToScan: fr.kata.order.delivery
+  api-docs:
+    path: /api-docs

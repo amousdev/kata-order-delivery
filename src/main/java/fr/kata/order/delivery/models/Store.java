@@ -9,4 +9,5 @@ public class Store {
 
     private Long idStore;
     private String name;
+
 }
