@@ -1,6 +1,6 @@
 # Order Delivery API
 
-##MVP Stories:
+## MVP Stories:
 ### 1. Story 1: Choosing the Delivery Method
 **Description:** As a customer, I can choose my delivery method. The available delivery methods are: 'DRIVE', 'DELIVERY', 'DELIVERYTODAY', 'DELIVERYASAP'.
 
@@ -43,7 +43,7 @@
 - Maven
 - Git
 
-###Clone repository
+### Clone repository
 
    ```
    git clone https://github.com/amousdev/kata-order-delivery.git
@@ -54,5 +54,9 @@ From a terminal window, run this command in project root directory: \
     ```  
     mvn spring-boot:run
     ```
+
+### ACCES CONSOLE DB
+DB is accessible from http://localhost:8787/h2-console
+
 ### ACCESS SWAGGER
 Swagger is availavle from URL http://localhost:8181/swagger-ui.html

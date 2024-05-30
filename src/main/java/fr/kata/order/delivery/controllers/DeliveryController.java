@@ -1,5 +1,6 @@
 package fr.kata.order.delivery.controllers;
 
+import fr.kata.order.delivery.exceptions.UnavailableDeliveryException;
 import fr.kata.order.delivery.exceptions.UnavailableDeliverySlotException;
 import fr.kata.order.delivery.exceptions.UnavailableServiceDeliveryException;
 import fr.kata.order.delivery.models.Delivery;
@@ -87,10 +88,8 @@ public class DeliveryController {
             @ApiResponse(responseCode = "200", description = "Successful",
                     content = @Content(schema = @Schema(implementation = Delivery.class)))
     })
-    ResponseEntity<Delivery> getDeliveryById(@PathVariable Long id) {
+    ResponseEntity<Delivery> getDeliveryById(@PathVariable Long id) throws UnavailableDeliveryException, UnavailableDeliverySlotException {
         return ResponseEntity.status(HttpStatus.OK).body(deliveryService.findDeliveryById(id));
     }
-
-
 }
 
