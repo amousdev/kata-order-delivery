@@ -42,6 +42,7 @@
 - Java 21
 - Maven
 - Git
+- Docker (Optional)
 
 ### Clone repository
 
@@ -50,13 +51,24 @@
    ```
 ### RUN APPLICATION
 
-From a terminal window, run this command in project root directory: \
-    ```  
-    mvn spring-boot:run
-    ```
+#### WITH MAVEN
+run this command in project root directory: \
+```
+mvn spring-boot:run
+```
+#### WITH DOCKER COMPOSE
+
+1) `mvn clean package`
+2) `docker compose up --build`
+
+You can remove the container using
+
+```docker compose down```
 
 ### ACCES CONSOLE DB
 DB is accessible from http://localhost:8787/h2-console
+Change the JDBC URL to : `jdbc:h2:mem:test`\
+Use username `user` and password `user`
 
 ### ACCESS SWAGGER
-Swagger is availavle from URL http://localhost:8181/swagger-ui.html
+Swagger is availavle from URL http://localhost:8787/swagger-ui.html

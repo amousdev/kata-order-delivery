@@ -1,0 +1,10 @@
+version: '2'
+services:
+  message-server:
+    container_name: order-delivery-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: order-delivery-app:latest
+    ports:
+      - 8787:8787
